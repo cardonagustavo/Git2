@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <main>
+        <h2>Varios tipos de formulario</h2>
+    </main>
+    <section>
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+    </section>
+
+    <br><br><br><br><br>
+
+    <section>
+        <label for="so">Comandos</label> <br>
+<select id="so" name="so">
+  <option value="" selected="selected">- selecciona -</option>
+  <option value="git init">git init</option>
+  <option value="git add .">git add .</option>
+  <option value="git commit -m "" ">git commit -m ""</option>
+  <option value="otro">Otro</option>
+</select>
+
+<label for="so2">Comandos</label> <br><br>
+<select id="so2" name="so2" size="5">
+  <option value="git config --global user.name" selected="selected">git config --global user.name</option>
+  <option value="git config --global user.email">git config --global user.email</option>
+  <option value="git merge">git merge</option>
+  <option value="otro">Otro</option>
+</select>
+
+<label for="so3">Comandos</label> <br/>
+<select id="so3" name="so3" size="5" multiple="multiple">
+  <option value="git log --all --oneline" selected="selected">git log --all --oneline</option>
+  <option value="git checkuot">git checkuot</option>
+  <option value="git status">Linux</option>
+  <option value="otro">Otro</option>
+</select>
+    </section>
+
+    <br><br><br><br><br>
+
+    <Section>
+        <form action="/php/insertar_subasta.php" method="post" enctype="multipart/form-data">
+
+            <fieldset>
+              <legend>Datos básicos</legend>
+            
+              <label for="nombre">Nombre</label> <br/>
+              <input type="text" name="nombre" id="nombre" size="50" maxlength="250" />
+            
+              <br/><br/>
+            
+              <label for="descripcion">Descripción</label> <br/>
+              <textarea name="descripcion" id="descripcion" cols="40" rows="5"></textarea>
+            
+              <br/><br/>
+            
+              Foto <input type="file" name="foto" />
+            
+              <br/><br/>
+            
+              <input name="contador" type="checkbox" value="si" /> Añadir contador de visitas
+            </fieldset>
+            
+            <fieldset>
+              <legend>Datos económicos</legend>
+            
+              <label for="precio">Precio</label>
+              <input type="text" size="5" id="precio" name="precio" /> $
+            
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+              <label for="impuestos">Impuestos</label>
+              <select id="impuestos" name="impuestos">
+                <option value="4">4%</option>
+                <option value="7">7%</option>
+                <option value="16">16%</option>
+                <option value="25">25%</option>
+              </select>
+            
+              <br/><br/>
+            
+              <label>Promoción</label> <br/>
+              <input type="radio" name="promocion" value="ninguno" checked="checked" /> Ninguno <br/>
+              <input type="radio" name="promocion" value="portes" /> Transporte gratuito <br/>
+              <input type="radio" name="promocion" value="descuento" /> Descuento 5%
+            </fieldset>
+            </form>
+    </Section>
+    <footer></footer>
+</body>
+</html>
